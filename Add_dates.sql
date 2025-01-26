@@ -46,20 +46,6 @@ VALUES ('SOL');
 INSERT INTO WAEHRUNG (NAME)
 VALUES ('XRP');
 
-INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
-VALUES(1,100.000,1,'uhu123123uh131fklqrz');
-INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
-VALUES(1,10.30,2,'g0gvl27vJApCvqFmauGu');
-INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
-VALUES(13,100000,1,'JtxOGGwuvDbDL8L98G8h');
-INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
-VALUES(8,1.000,4,'LSP7fzHAtx2JPnUCdgnJ');
-INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
-VALUES(7,0.008463,3,'fij7AFsmq84lTMjNhOi6');
-INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
-VALUES(5,143534.03244,5,'yjh53acc3HQOOTPcYi9l');
-
-COMMIT;
 
 INSERT INTO PAIR (BASECRYPTO_ID,QUOTECRYPTO_ID,KURS)--USDT-BTC
 VALUES (1,2,0.000009513);
@@ -101,94 +87,139 @@ INSERT INTO PAIR (BASECRYPTO_ID,QUOTECRYPTO_ID,KURS)--XRP-ETH
 VALUES (5,3,0.000942);
 INSERT INTO PAIR (BASECRYPTO_ID,QUOTECRYPTO_ID,KURS)--XRP-SOL
 VALUES (5,4,0.012245);
+
 INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
 VALUES(1,100.000,1,'uhu123123uh131fklqrz');
 INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
 VALUES(1,10.30,2,'g0gvl27vJApCvqFmauGu');
 INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
-VALUES(13,100000,1,'COMMIT;JtxOGGwuvDbDL8L98G8h');
+VALUES(13,100000,1,'JtxOGGwuvDbDL8L98G8h');
 INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
 VALUES(8,1.000,4,'LSP7fzHAtx2JPnUCdgnJ');
 INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
 VALUES(7,0.008463,3,'fij7AFsmq84lTMjNhOi6');
 INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
 VALUES(5,143534.03244,5,'yjh53acc3HQOOTPcYi9l');
+INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
+VALUES(1,1,2,'OfbC7AkOK0eC0hWGKURt');
+INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
+VALUES(5,143534.03244,5,'YUfoiR8qo4plRnfBGJsC');
+INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
+VALUES(5,143534.03244,5,'zJTGfQvPsf8MuuWsq8TB');
+INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
+VALUES(5,143534.03244,5,'LdCNcBqawGUTpZbTX8Mo');
+INSERT INTO WALLET (USER_ID, KONTOSTAND ,WAEHRUNG_ID,ADRESSE)
+VALUES(5,143534.03244,5,'WUmjipKfQXuTw0eq0eFd');
+COMMIT;
+
 
 
 INSERT INTO Investors (Betrag, Waehrung_ID, Start_Datum, Gewinn)
 VALUES (1000.00, 1, TO_DATE('2025-01-01', 'YYYY-MM-DD'), 50.00);
-
 INSERT INTO Investors (Betrag, Waehrung_ID, Start_Datum, Gewinn)
 VALUES (500.00, 2, TO_DATE('2025-01-05', 'YYYY-MM-DD'), 20.00);
-
 INSERT INTO Investors (Betrag, Waehrung_ID, Start_Datum, Gewinn)
 VALUES (750.25, 3, TO_DATE('2025-02-10', 'YYYY-MM-DD'), 35.75);
-
 INSERT INTO Investors (Betrag, Waehrung_ID, Start_Datum, Gewinn)
 VALUES (2000.00, 4, TO_DATE('2025-03-15', 'YYYY-MM-DD'), 100.00);
-
 INSERT INTO Investors (Betrag, Waehrung_ID, Start_Datum, Gewinn)
 VALUES (1200.75, 5, TO_DATE('2025-04-01', 'YYYY-MM-DD'), 60.50);
-
 INSERT INTO Investors (Betrag, Waehrung_ID, Start_Datum, Gewinn)
 VALUES (300.00, 1, TO_DATE('2025-01-20', 'YYYY-MM-DD'), 10.00);
-
 INSERT INTO Investors (Betrag, Waehrung_ID, Start_Datum, Gewinn)
 VALUES (999.99, 3, TO_DATE('2025-02-25', 'YYYY-MM-DD'), 49.99);
-
 INSERT INTO Investors (Betrag, Waehrung_ID, Start_Datum, Gewinn)
 VALUES (4500.00, 2, TO_DATE('2025-05-05', 'YYYY-MM-DD'), 225.00);
-
 INSERT INTO Investors (Betrag, Waehrung_ID, Start_Datum, Gewinn)
 VALUES (625.50, 4, TO_DATE('2025-06-10', 'YYYY-MM-DD'), 31.25);
-
 INSERT INTO Investors (Betrag, Waehrung_ID, Start_Datum, Gewinn)
 VALUES (1500.00, 5, TO_DATE('2025-07-01', 'YYYY-MM-DD'), 75.00);
 
 INSERT INTO Provider (Dienstleistung)
 VALUES ('Banking');
-
 INSERT INTO Provider (Dienstleistung)
 VALUES ('Trading');
-
 INSERT INTO Provider (Dienstleistung)
 VALUES ('Exchange');
-
 INSERT INTO Provider (Dienstleistung)
 VALUES ('Staking');
-
 INSERT INTO Provider (Dienstleistung)
 VALUES ('Payments'); 
 
 INSERT INTO Staking_Offers (Waehrung_ID, Gewinn, Mindest_frist, MaxVolume)
 VALUES (1, 5.00, 30, 10000.0000000000); -- USDT, 5% Ertrag, Mindestlaufzeit 30 Tage, Maximalvolumen 10.000
-
 INSERT INTO Staking_Offers (Waehrung_ID, Gewinn, Mindest_frist, MaxVolume)
 VALUES (2, 8.50, 60, 5000.0000000000); 
-
 INSERT INTO Staking_Offers (Waehrung_ID, Gewinn, Mindest_frist, MaxVolume)
 VALUES (3, 6.75, 45, 2000.0000000000); 
-
 INSERT INTO Staking_Offers (Waehrung_ID, Gewinn, Mindest_frist, MaxVolume)
 VALUES (4, 10.00, 90, 1500.0000000000); 
-
 INSERT INTO Staking_Offers (Waehrung_ID, Gewinn, Mindest_frist, MaxVolume)
 VALUES (5, 4.50, 30, 8000.0000000000); 
-
 INSERT INTO Staking_Offers (Waehrung_ID, Gewinn, Mindest_frist, MaxVolume)
 VALUES (1, 7.00, 15, 12000.0000000000); 
-
 INSERT INTO Staking_Offers (Waehrung_ID, Gewinn, Mindest_frist, MaxVolume)
 VALUES (3, 9.25, 90, 3000.0000000000);
-
 INSERT INTO Staking_Offers (Waehrung_ID, Gewinn, Mindest_frist, MaxVolume)
 VALUES (2, 6.00, 30, 7000.0000000000); 
-
 INSERT INTO Staking_Offers (Waehrung_ID, Gewinn, Mindest_frist, MaxVolume)
 VALUES (4, 11.50, 120, 2000.0000000000); 
-
 INSERT INTO Staking_Offers (Waehrung_ID, Gewinn, Mindest_frist, MaxVolume)
 VALUES (5, 5.25, 20, 10000.0000000000); 
+
+
+INSERT INTO Earn (USER_ID, typ, Frist, Mindest_Betrag, Gewinn)
+VALUES (1, 'Staking', 30, 1000.00, 50.00);
+INSERT INTO Earn (USER_ID, typ, Frist, Mindest_Betrag, Gewinn)
+VALUES (2, 'Invest', 60, 5000.00, 300.00);
+INSERT INTO Earn (USER_ID, typ, Frist, Mindest_Betrag, Gewinn)
+VALUES (3, 'Trading', 15, 200.00, 20.00);
+INSERT INTO Earn (USER_ID, typ, Frist, Mindest_Betrag, Gewinn)
+VALUES (1, 'Trading', 120, 1500.00, 400.00);
+INSERT INTO Earn (USER_ID, typ, Frist, Mindest_Betrag, Gewinn)
+VALUES (2, 'Staking', 45, 2500.00, 150.00);
+INSERT INTO Earn (USER_ID, typ, Frist, Mindest_Betrag, Gewinn)
+VALUES (3, 'Lending', 180, 10000.00, 800.00);
+
+INSERT INTO Transaktionen (Betrag, Datum_Zeit, typ, Status, USER_ID, Waehrung_ID)
+VALUES (543.21, SYSDATE, 'Kauf', 'erfolgreich', 1, 1);
+INSERT INTO Transaktionen (Betrag, Datum_Zeit, typ, Status, USER_ID, Waehrung_ID)
+VALUES (231.45, SYSDATE, 'Verkauf', 'ausstehend', 2, 2);
+INSERT INTO Transaktionen (Betrag, Datum_Zeit, typ, Status, USER_ID, Waehrung_ID)
+VALUES (875.00, SYSDATE, 'Kauf', 'fehlgeschlagen', 3, 3);
+INSERT INTO Transaktionen (Betrag, Datum_Zeit, typ, Status, USER_ID, Waehrung_ID)
+VALUES (123.99, SYSDATE, 'Verkauf', 'erfolgreich', 1, 3);
+INSERT INTO Transaktionen (Betrag, Datum_Zeit, typ, Status, USER_ID, Waehrung_ID)
+VALUES (999.50, SYSDATE, 'Kauf', 'erfolgreich', 2, 1);
+INSERT INTO Transaktionen (Betrag, Datum_Zeit, typ, Status, USER_ID, Waehrung_ID)
+VALUES (67.89, SYSDATE, 'Kauf', 'erfolgreich', 3, 2);
+
+
+INSERT INTO SWAP (USER_ID, FROM_WAEHRUNG_ID, TO_WAEHRUNG_ID, BETRAG, DATUM)
+VALUES (1, 1, 2, 100.00, SYSDATE);
+INSERT INTO SWAP (USER_ID, FROM_WAEHRUNG_ID, TO_WAEHRUNG_ID, BETRAG, DATUM)
+VALUES (2, 2, 3, 200.00, SYSDATE);
+INSERT INTO SWAP (USER_ID, FROM_WAEHRUNG_ID, TO_WAEHRUNG_ID, BETRAG, DATUM)
+VALUES (3, 3, 1, 50.00, SYSDATE);
+INSERT INTO SWAP (USER_ID, FROM_WAEHRUNG_ID, TO_WAEHRUNG_ID, BETRAG, DATUM)
+VALUES (1, 2, 1, 300.00, SYSDATE);
+INSERT INTO SWAP (USER_ID, FROM_WAEHRUNG_ID, TO_WAEHRUNG_ID, BETRAG, DATUM)
+VALUES (2, 1, 3, 150.00, SYSDATE);
+INSERT INTO SWAP (USER_ID, FROM_WAEHRUNG_ID, TO_WAEHRUNG_ID, BETRAG, DATUM)
+VALUES (3, 2, 1, 400.00, SYSDATE);
+INSERT INTO SWAP (USER_ID, FROM_WAEHRUNG_ID, TO_WAEHRUNG_ID, BETRAG, DATUM)
+VALUES (2, 3, 1, 150.00, SYSDATE);
+
+INSERT INTO Staking_Wallet (USER_ID, Waehrung_ID, Betrag, Start_Datum, End_Datum, Status)
+VALUES (1, 1, 1000.00, TO_DATE('2025-01-01', 'YYYY-MM-DD'), TO_DATE('2025-07-01', 'YYYY-MM-DD'), 'aktiv');
+INSERT INTO Staking_Wallet (USER_ID, Waehrung_ID, Betrag, Start_Datum, End_Datum, Status)
+VALUES (2, 2, 500.00, TO_DATE('2024-12-01', 'YYYY-MM-DD'), TO_DATE('2025-06-01', 'YYYY-MM-DD'), 'abgeschlossen');
+INSERT INTO Staking_Wallet (USER_ID, Waehrung_ID, Betrag, Start_Datum, End_Datum, Status)
+VALUES (3, 3, 2000.00, TO_DATE('2025-01-15', 'YYYY-MM-DD'), NULL, 'aktiv');
+INSERT INTO Staking_Wallet (USER_ID, Waehrung_ID, Betrag, Start_Datum, End_Datum, Status)
+VALUES (1, 2, 1500.00, TO_DATE('2024-11-15', 'YYYY-MM-DD'), TO_DATE('2025-05-15', 'YYYY-MM-DD'), 'abgeschlossen');
+INSERT INTO Staking_Wallet (USER_ID, Waehrung_ID, Betrag, Start_Datum, End_Datum, Status)
+VALUES (2, 3, 3000.00, TO_DATE('2025-02-01', 'YYYY-MM-DD'), NULL, 'aktiv');
 
 
 COMMIT;
